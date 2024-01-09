@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: odin-frontend-dev
+    build:
+      context: .
+      dockerfile: ./frontend/dev.Dockerfile
+    # volumes Breaks config
+    # volumes:
+    #   - ./frontend:/usr/src/app
+    container_name: odin-frontend-dev
+    ports:
+      - 5173:5173
+  backend:
+    image: odin-backend-dev
+    build:
+      dockerfile: ./backend/dev.Dockerfile
+    volumes:
+      - ./backend:/usr/src/app
+    container_name: odin-backend-dev
+    ports:
+      - 3000:3000
