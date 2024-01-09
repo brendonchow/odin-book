@@ -2,9 +2,10 @@ FROM node:20
 
 WORKDIR /usr/src/app
 
-COPY ./backend .
+COPY --chown=node:node . .
 
-# Change npm ci to npm install since we are going to be in development mode
-RUN npm install
+RUN npm ci --only=production
 
-CMD ["npm", "run", "dev"]
+USER node
+
+CMD npm run dev
