@@ -8,12 +8,12 @@ services:
     # nginx exposes with port 80
     ports:
       - 5173:80
-  backend:
-    image: odin-backend
-    container_name: odin-backend
-    build:
-      context: ./backend/
-      dockerfile: ./Dockerfile
-    ports:
-      - 3000:3000
+  # backend:
+  #   image: odin-backend
+  #   container_name: odin-backend
+  #   build:
+  #     context: ./backend/
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 3000:3000
 # docker compose -f docker-compose.yml up --build

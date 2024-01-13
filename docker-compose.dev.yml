@@ -10,13 +10,13 @@ services:
       - 5173:5173
     container_name: odin-frontend-dev
 
-  backend-dev:
-    image: odin-backend-dev
-    build:
-      context: ./backend
-      dockerfile: dev.Dockerfile
-    volumes:
-      - ./backend/src:/usr/src/app/src
-    ports:
-      - 3000:3000
-    container_name: odin-backend-dev
+  # backend-dev:
+  #   image: odin-backend-dev
+  #   build:
+  #     context: ./backend
+  #     dockerfile: dev.Dockerfile
+  #   volumes:
+  #     - ./backend/src:/usr/src/app/src
+  #   ports:
+  #     - 3000:3000
+  #   container_name: odin-backend-dev
