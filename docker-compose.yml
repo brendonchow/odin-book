@@ -1,13 +1,13 @@
 services:
-  frontend:
-    image: odin-frontend
-    container_name: odin-frontend
-    # nginx exposes with port 80
-    build:
-      context: ./frontend/
-      dockerfile: ./Dockerfile
-    ports:
-      - 5173:80
+  # frontend:
+  #   image: odin-frontend
+  #   container_name: odin-frontend
+  #   # nginx exposes with port 80
+  #   build:
+  #     context: ./frontend/
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 5173:80
   backend:
     image: odin-backend
     container_name: odin-backend

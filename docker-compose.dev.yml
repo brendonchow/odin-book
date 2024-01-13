@@ -1,15 +1,15 @@
 services:
-  frontend-dev:
-    image: odin-frontend-dev
-    build:
-      context: ./frontend/
-      dockerfile: ./dev.Dockerfile
-    # This produces config error
-    # volumes:
-    #   - ./frontend/:/usr/src/app
-    ports:
-      - 5173:5173
-    container_name: odin-frontend-dev
+  # frontend-dev:
+  #   image: odin-frontend-dev
+  #   build:
+  #     context: ./frontend/
+  #     dockerfile: ./dev.Dockerfile
+  #   # This produces config error
+  #   # volumes:
+  #   #   - ./frontend/:/usr/src/app
+  #   ports:
+  #     - 5173:5173
+  #   container_name: odin-frontend-dev
 
   backend-dev:
     image: odin-backend-dev

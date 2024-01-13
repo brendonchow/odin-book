@@ -1,6 +1,5 @@
 node_modules
-.gitignore
-.eslintrc.cjs
-.dockerignore
+.*
 Dockerfile
 dev.Dockerfile
+build
