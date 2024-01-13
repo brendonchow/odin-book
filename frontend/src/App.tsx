@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [message, setMessage] = useState("");
+
   useEffect(() => {
     const fetchMessage = async () => {
       const response = await fetch("http://localhost:3000/");
-      const data = await response.json();
+      const data = await response.text();
       setMessage(data);
     };
     fetchMessage();
