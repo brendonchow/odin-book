@@ -2,8 +2,11 @@ FROM node:20
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY --chown=node:node . .
 
 RUN npm install
 
-CMD ["npm", "run", "dev"]
+# Error: permission denied, vite.config
+# USER node
+
+CMD npm run dev
